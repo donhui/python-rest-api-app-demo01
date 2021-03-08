@@ -1,0 +1,21 @@
+org: donghui
+app: python-rest-api-app-demo01
+service: python-rest-api-app-demo01
+
+provider:
+  name: aws
+  runtime: python3.8
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: /hello
+          method: get
+  second:
+    handler: handler.second
+    events:
+      - http:
+          path: /second
+          method: get
