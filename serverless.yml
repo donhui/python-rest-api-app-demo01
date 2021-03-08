@@ -19,3 +19,10 @@ functions:
       - http:
           path: /second
           method: get
+  third:
+    handler: handler.third
+    events:
+      - http:
+          path: /third
+          method: get
+
